@@ -42,11 +42,9 @@ app.use("*", (_, res) => {
   res.sendFile(path.resolve(DIRNAME, "client", "dist", "index.html"));
 });
 
-connectDB();
-
-export default app;
-
-/* app.listen(PORT, () => {
+app.listen(PORT, () => {
   connectDB();
   console.log(`Server listen at port ${PORT}`);
-}); */
+});
+
+export default app;
