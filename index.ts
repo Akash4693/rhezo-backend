@@ -17,9 +17,6 @@ const app = express();
 
 const PORT = 8000;
 console.log("PORT: ", process.env.PORT);
-console.log("Frontend: ", process.env.FRONTEND_URL);
-console.log("Cloud: ", process.env.CLOUD_NAME);
-console.log("secret: ", process.env.SECRET_KEY);
 
 const DIRNAME = path.resolve();
 
@@ -45,9 +42,11 @@ app.use("*", (_, res) => {
   res.sendFile(path.resolve(DIRNAME, "client", "dist", "index.html"));
 });
 
-app.listen(PORT, () => {
-  connectDB();
-  console.log(`Server listen at port ${PORT}`);
-});
+connectDB();
 
 export default app;
+
+/* app.listen(PORT, () => {
+  connectDB();
+  console.log(`Server listen at port ${PORT}`);
+}); */
