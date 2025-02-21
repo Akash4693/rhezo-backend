@@ -5,7 +5,6 @@
   "main": "index.ts",
   "scripts": {
     "dev": "nodemon index.ts",
-    "stripe": "stripe listen --forward-to localhost:8000/api/v1/order/webhook",
     "start": "nodemon index.ts"
   },
   "keywords": [],
