@@ -15,7 +15,8 @@ dotenv.config();
 
 const app = express();
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 3000;
+console.log("Port: ", PORT);
 console.log("PORT: ", process.env.PORT);
 
 const DIRNAME = path.resolve();
@@ -31,7 +32,7 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
-app.use("/test", (req, res) => {
+app.get("/", (req, res) => {
   res.send("Hello world!");
 });
 
