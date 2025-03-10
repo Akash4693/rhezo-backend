@@ -11,7 +11,9 @@ import menuRoute from "./routes/menu.route";
 import orderRoute from "./routes/order.route";
 import path from "path";
 
-dotenv.config();
+if (process.env.NODE_ENV !== "production") {
+  dotenv.config();
+}
 
 const app = express();
 
@@ -20,6 +22,7 @@ console.log("Port: ", PORT);
 console.log("PORT: ", process.env.PORT);
 
 const DIRNAME = path.resolve();
+console.log(DIRNAME);
 
 // default middleware for any mern project
 app.use(bodyParser.json({ limit: "10mb" }));
@@ -32,8 +35,11 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
-app.get("/", (req, res) => {
+app.get("/test", (_req, res) => {
   res.send("Hello world!");
+});
+app.get("/api/v1/user", (_req, res) => {
+  res.json({ message: "Users route working!" });
 });
 
 // api
@@ -51,3 +57,5 @@ app.listen(PORT, () => {
   connectDB();
   console.log(`Server listen at port ${PORT}`);
 });
+
+export default app;
