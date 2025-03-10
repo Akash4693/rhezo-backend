@@ -36,7 +36,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.get("/test", (_req, res) => {
-  res.send("Hello world!");
+  return res.send("Hello world!");
 });
 app.get("/api/v1/user", (_req, res) => {
   res.json({ message: "Users route working!" });
