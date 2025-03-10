@@ -1,0 +1,1 @@
+{"version":3,"file":"mailtrap.js","sourceRoot":"","sources":["../../mailtrap/mailtrap.ts"],"names":[],"mappings":";;;;;;AAAA,uCAAwC;AACxC,oDAA4B;AAE5B,gBAAM,CAAC,MAAM,EAAE,CAAC;AAEH,QAAA,MAAM,GAAG,IAAI,yBAAc,CAAC,EAAC,KAAK,EAAE,OAAO,CAAC,GAAG,CAAC,kBAAmB,EAAE,CAAC,CAAC;AAEvE,QAAA,MAAM,GAAG;IACpB,KAAK,EAAE,2BAA2B;IAClC,IAAI,EAAE,OAAO;CACd,CAAC"}
