@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "nodemon index.ts",
     "stripe": "stripe listen --forward-to localhost:8000/api/v1/order/webhook",
-    "start": "node dist/index.js",
-    "build": "tsc"
+    "start": "nodemon dist/index.js"
   },
   "keywords": [],
   "author": "",
@@ -39,6 +38,8 @@
     "@types/multer": "^1.4.12",
     "@types/node": "^22.13.10",
     "nodemon": "^3.1.9",
+    "pre-commit": "^1.2.2",
+    "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3"
   }
