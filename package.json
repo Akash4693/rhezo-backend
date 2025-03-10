@@ -5,8 +5,17 @@
   "scripts": {
     "dev": "nodemon index.ts",
     "stripe": "stripe listen --forward-to localhost:8000/api/v1/order/webhook",
-    "start": "nodemon dist/index.js"
+    "start": "nodemon dist/index.js",
+    "build": "rimraf dist && tsc",
+    "ts.check": "tsc --project tsconfig.json",
+    "add-build": "git add dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "pre-commit": [
+    "ts.check",
+    "build",
+    "add-build"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
